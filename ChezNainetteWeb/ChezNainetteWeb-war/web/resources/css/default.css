@@ -3,7 +3,8 @@ body {
     font-size: 12px;
     font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     color: #000000;  
-    margin: 10px;
+    margin: -12px;
+    background: aliceblue;
 }
 
 h1 {
@@ -13,8 +14,9 @@ h1 {
     font-weight: bold;
     margin: 0px;
     padding: 0px;
-    color: #D20005;
+    color: #006807;
 }
+
 
 a:link, a:visited {
   color: #045491;

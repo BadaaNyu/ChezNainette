@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+        
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="content">
+                <div class="divContent">
+                    <div class="leftDiv">
+                        <h1>Se connecter</h1>
+                        <h:form>
+                            <h:outputLabel value="Email : " for="email"/>
+                            <h:inputText id="email" value="#{clientControleur.email}"/><br/>
+                            <h:outputLabel value="Mot de passe : " for="motDePasse"/>
+                            <h:inputSecret id="motDePasse" value="#{clientControleur.password}"/><br/>
+                            <h:commandButton value="Valider" action="#{clientControleur.verifierMdp(clientControleur.password)}"/>
+                        </h:form>
+                    </div>
+                    <div class="rightDiv">
+                        <h1>S'inscrire</h1>
+                        <h:form>
+                            <h:outputLabel value="Nom : " for="nom"/>
+                            <h:inputText id="nom" value="#{clientControleur.email}"/><br/>
+                            <h:outputLabel value="Prénom : " for="prenom"/>
+                            <h:inputSecret id="prenom" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="AdresseEmail" for="email"/>
+                            <h:inputText id="email" value="#{clientControleur.email}"/><br/>
+                            <h:outputLabel value="Mot de passe : " for="motDePasse"/>
+                            <h:inputSecret id="motDePasse" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="Mot de passe : " for="verifMotDePasse"/>
+                            <h:inputSecret id="VerifotDePasse" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="Rue : " for="rue"/>
+                            <h:inputText id="rue" value="#{clientControleur.email}"/><br/>
+                            <h:outputLabel value="Numero : " for="numero"/>
+                            <h:inputSecret id="numero" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="Code Postal : " for="codePostal"/>
+                            <h:inputText id="codePostal" value="#{clientControleur.email}"/><br/>
+                            <h:outputLabel value="Ville : " for="ville"/>
+                            <h:inputSecret id="ville" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="Pays : " for="pays"/>
+                            <h:inputSecret id="pays" value="#{clientControleur.password}"/><br/>
+                            <h:outputLabel value="Telephone : " for="telephone"/>
+                            <h:inputSecret id="telephone" value="#{clientControleur.password}"/><br/>
+                            <h:commandButton value="Valider" action="#{clientControleur.verifierMdp(clientControleur.password)}"/>
+                        </h:form>
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

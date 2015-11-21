@@ -2,32 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ArticleFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ClientFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/AbstractFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ReductionFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/DescriptionFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/AdresseFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/DenominationcatFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/LangueFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/ejb/ChezNainetteSession.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/CommandeFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/DenominationcatFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/entityPackage/Langue.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ReductionFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/CommandeFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/AdresseFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/entityPackage/Denominationcat.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/DescriptionFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ArticleFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ComArtFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/CategorieFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ClientFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/CategorieFacadeLocal.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/LangueFacade.java</file>
-            <file>file:/C:/Users/François/Documents/NetBeansProjects/ChezNainetteWeb/ChezNainetteWeb-ejb/src/java/sessionBeanPackage/ComArtFacade.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

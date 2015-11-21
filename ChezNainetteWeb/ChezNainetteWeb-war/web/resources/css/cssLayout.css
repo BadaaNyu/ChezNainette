@@ -1,7 +1,7 @@
 
 #bottom {
     position: relative;
-    background-color: #c2dfef;
+    background-color: #B0F9B5;
     color: #000000;
     padding: 0px 0px 0px 10px;
     position: relative;
@@ -31,7 +31,6 @@
     margin-top: auto;
     width: 1010px;
     position: relative;
-    background-color: #dddddd;
 }
 
 #top {
@@ -68,12 +67,24 @@
 }
 
 #top a:link, #top a:visited {
-  color: white;
+  color: black;
   font-weight : bold;
   text-decoration: none;
 }
 
-#top a:link:hover, #top a:visited:hover  {
+#barNav a:link:hover, #barNav a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+.topBar a:link, .topBar a:visited {
+  color: black;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+.topBar a:link:hover, .topBar a:visited:hover  {
   color: black;
   font-weight : bold;
   text-decoration : underline;
@@ -102,7 +113,7 @@ li{
 }
 
 .topBarLeft{
-    background-color: greenyellow;
+    background-color: #B0F9B5;
     float: left;
     padding-left: 17px;
     vertical-align: baseline;
@@ -247,6 +258,38 @@ li{
     padding-top: 6px;
     line-height: 14px;
     cursor: pointer;
-    height: 34px;
+    height: 40px;
     display: block;
+}
+
+.divContent{
+    position: relative;
+    width: 940px;
+    padding: 5px 0px 10px;
+    margin: auto;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+}
+
+.leftDiv{
+    float: left;
+    width: 40%;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rightDiv{
+    float:right;
+    width:55%;
+    display: block;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+*{
+    padding:2px;
 }

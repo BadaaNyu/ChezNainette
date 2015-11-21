@@ -42,22 +42,26 @@
                             </h:form>
                         </div>
                         <div class="userActionHeader">
-                            <c:if test="#{clientControleur.isConnected == false}"> 
+                            <c:if test="#{clientControleur.isConnected == false}">
                                 <div class ="account">
                                     <h:graphicImage id="account" url="/image/account.png"/>
-                                    <div class ="accountText">
-                                        Mon Compte<br/>
-                                        <h:commandLink value = "Se connecter" action ="faces/client/connection.xhtml"/>
-                                    </div>
+                                    <h:form>
+                                        <div class ="accountText">
+                                            Mon Compte<br/>
+                                            <h:commandLink value = "Se connecter" action="faces/connection.xhtml"></h:commandLink>
+                                        </div>
+                                    </h:form>
                                 </div>
                            </c:if>
                             <c:if test="#{clientControleur.isConnected == true}">
                                 <div class ="account">
                                     <h:graphicImage id="account" url="/image/account.png"/>
-                                    <div class ="accountText">
-                                        Mon Compte<br/>
-                                        <h:commandLink value = "#{ClientControleur.nom}" action ="faces/client/connection.xhtml"/>
-                                    </div>
+                                    <h:form>
+                                        <div class ="accountText">
+                                            Mon Compte<br/>
+                                            <h:commandLink value = "#{clientControleur.nom}" action="faces/connection.xhtml"/>
+                                        </div>
+                                    </h:form>
                                 </div>
                             </c:if>
                             <div class ="caddie">
