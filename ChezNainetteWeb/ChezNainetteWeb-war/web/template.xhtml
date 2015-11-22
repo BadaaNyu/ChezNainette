@@ -3,8 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
+    <f:loadBundle basename="language.lang" var="trd"/> 
+    
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="css/default.css"/>
@@ -20,55 +23,63 @@
                     <div class ="rightPartHeader">
                         <div class="topBar">
                             <ul class ="topBarLeft">
-                                <li><h:graphicImage id="frenchflag" url="/image/frenchflag.jpg"/></li>
+                                <h:form>
+                                    <li>
+                                        <h:commandButton value="FR" action="#{internationalisationControleur.settoFrancais()}" class="petitbtn"/>
+                                    </li>
+                                    <li>
+                                        <h:commandButton value="EN" action="#{internationalisationControleur.settoEnglish()}" class="petitbtn"/>
+                                    </li>
+                                </h:form>
+                                <li><h:outputText value=" #{trd.service}"/></li>
                                 <li>|</li>
-                                <li><h:graphicImage id="englishflag" url="/image/englishflag.jpg"/></li>
+                                <li><h:outputText value="#{trd.offre}"/></li>
                                 <li>|</li>
-                                <li>service après vente</li>
+                                <li><h:outputText value="#{trd.contacts}"/></li>
                                 <li>|</li>
-                                <li>Offre spéciale : 50€ offerts</li>
+                                <li><h:outputText value="#{trd.serviceClient}"/></li>
                                 <li>|</li>
-                                <li>Contacts</li>
-                                <li>|</li>
-                                <li>Service d'aide à la clientèle</li>
-                                <li>|</li>
-                                <li>0485/893545 Service 0.35€/min + prix appel</li>
+                                <li><h:outputText value="#{trd.numeroTel}"/></li>
                             </ul>
                         </div>
                         <div class="searchHeader">
                             <h:form>
                                 <h:inputText size="50"/>
-                                <h:commandButton value ="Rechercher"/>
+                                <h:commandButton value ="#{trd.rechercher}" class="btn"/>
                             </h:form>
                         </div>
                         <div class="userActionHeader">
-                            <c:if test="#{clientControleur.isConnected == false}">
-                                <div class ="account">
-                                    <h:graphicImage id="account" url="/image/account.png"/>
-                                    <h:form>
-                                        <div class ="accountText">
-                                            Mon Compte<br/>
-                                            <h:commandLink value = "Se connecter" action="faces/connection.xhtml"></h:commandLink>
-                                        </div>
-                                    </h:form>
-                                </div>
-                           </c:if>
-                            <c:if test="#{clientControleur.isConnected == true}">
-                                <div class ="account">
-                                    <h:graphicImage id="account" url="/image/account.png"/>
-                                    <h:form>
-                                        <div class ="accountText">
-                                            Mon Compte<br/>
-                                            <h:commandLink value = "#{clientControleur.nom}" action="faces/connection.xhtml"/>
-                                        </div>
-                                    </h:form>
-                                </div>
-                            </c:if>
+                            <c:set var="connection" scope="session" value="#{clientControleur.isConnected}"/>
+                                <c:if test="${connection == false}">
+                                    <div class ="account">
+                                        <h:graphicImage id="account" url="/image/account.png"/>
+                                        <h:form>
+                                            <div class ="accountText">
+                                                <h:outputText value="#{trd.monCompte}"/><br/>
+                                                <h:commandLink value = "#{trd.seConnecter}" action="faces/connection.xhtml"></h:commandLink>
+                                            </div>
+                                        </h:form>
+                                    </div>
+                                </c:if>
+                                <c:if test="${connection == true}">
+                                    <div class ="account">
+                                        <h:graphicImage id="account" url="/image/account.png"/>
+                                        <h:form>
+                                            <div class ="accountText">
+                                                <h:outputText value="#{trd.monCompte}"/><br/>
+                                                <h:commandLink value = "#{clientControleur.clientActuel.prenom}" action="faces/monCompte.xhtml"/>
+                                            </div>
+                                        </h:form>
+                                    </div>
+                                </c:if>
+                            
                             <div class ="caddie">
                                 <h:graphicImage id="caddie" url="/image/caddie.jpg"/>
-                                <div class ="caddieText">
-                                    Mon panier(0)
-                                </div>
+                                <h:form>
+                                    <div class ="caddieText">
+                                        <h:commandLink value = "#{trd.monPanier}(0)" action="faces/panier.xhtml"/>
+                                    </div>
+                                </h:form>
                             </div>
                         </div>
                     </div>

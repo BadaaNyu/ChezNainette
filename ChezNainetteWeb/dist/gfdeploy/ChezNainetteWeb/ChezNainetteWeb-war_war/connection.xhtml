@@ -2,8 +2,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
         
+    <f:view locale="#{internationalisationControleur.locale}"/>
     <body>
 
         <ui:composition template="./template.xhtml">
@@ -13,39 +15,37 @@
                     <div class="leftDiv">
                         <h1>Se connecter</h1>
                         <h:form>
-                            <h:outputLabel value="Email : " for="email"/>
-                            <h:inputText id="email" value="#{clientControleur.email}"/><br/>
-                            <h:outputLabel value="Mot de passe : " for="motDePasse"/>
-                            <h:inputSecret id="motDePasse" value="#{clientControleur.password}"/><br/>
-                            <h:commandButton value="Valider" action="#{clientControleur.verifierMdp(clientControleur.password)}"/>
+                            <h:outputLabel value="#{trd.email} : " for="iDemail"/>
+                            <h:inputText id="iDemail" value="#{clientControleur.email}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.mdp} : " for="iDmotDePasse"/>
+                            <h:inputSecret id="iDmotDePasse" value="#{clientControleur.motDePasse}" class="inputText"/><br/>
+                            <h:commandButton value="#{trd.valider}" action="#{clientControleur.verifierMdp(clientControleur.motDePasse)}" class="btn"/>
                         </h:form>
                     </div>
                     <div class="rightDiv">
                         <h1>S'inscrire</h1>
                         <h:form>
-                            <h:outputLabel value="Nom : " for="nom"/>
-                            <h:inputText id="nom" value="#{clientControleur.email}"/><br/>
-                            <h:outputLabel value="Prénom : " for="prenom"/>
-                            <h:inputSecret id="prenom" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="AdresseEmail" for="email"/>
-                            <h:inputText id="email" value="#{clientControleur.email}"/><br/>
-                            <h:outputLabel value="Mot de passe : " for="motDePasse"/>
-                            <h:inputSecret id="motDePasse" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="Mot de passe : " for="verifMotDePasse"/>
-                            <h:inputSecret id="VerifotDePasse" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="Rue : " for="rue"/>
-                            <h:inputText id="rue" value="#{clientControleur.email}"/><br/>
-                            <h:outputLabel value="Numero : " for="numero"/>
-                            <h:inputSecret id="numero" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="Code Postal : " for="codePostal"/>
-                            <h:inputText id="codePostal" value="#{clientControleur.email}"/><br/>
-                            <h:outputLabel value="Ville : " for="ville"/>
-                            <h:inputSecret id="ville" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="Pays : " for="pays"/>
-                            <h:inputSecret id="pays" value="#{clientControleur.password}"/><br/>
-                            <h:outputLabel value="Telephone : " for="telephone"/>
-                            <h:inputSecret id="telephone" value="#{clientControleur.password}"/><br/>
-                            <h:commandButton value="Valider" action="#{clientControleur.verifierMdp(clientControleur.password)}"/>
+                            <h:outputLabel value="#{trd.nom} : " for="nom"/>
+                            <h:inputText id="nom" value="#{clientControleur.nouveauClient.nom}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.prenom} : " for="prenom"/>
+                            <h:inputText id="prenom" value="#{clientControleur.nouveauClient.prenom}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.email} : " for="email"/>
+                            <h:inputText id="email" value="#{clientControleur.nouveauClient.adresseMail}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.mdp} : " for="motDePasse"/>
+                            <h:inputSecret id="motDePasse" value="#{clientControleur.nouveauClient.motDePasse}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.mdp} : " for="verifMotDePasse"/>
+                            <h:inputSecret id="VerifotDePasse" value="#{clientControleur.nouveauClient.motDePasse}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.rue} : " for="rue"/>
+                            <h:inputText id="rue" value="#{clientControleur.nouveauClient.adresse.rue}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.codePostal} : " for="codePostal"/>
+                            <h:inputText id="codePostal" value="#{clientControleur.nouveauClient.adresse.codePostal}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.ville} : " for="ville"/>
+                            <h:inputText id="ville" value="#{clientControleur.nouveauClient.adresse.ville}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.pays} : " for="pays"/>
+                            <h:inputText id="pays" value="#{clientControleur.nouveauClient.adresse.pays}" class="inputText"/><br/>
+                            <h:outputLabel value="#{trd.telephone} : " for="telephone"/>
+                            <h:inputText id="telephone" value="#{clientControleur.nouveauClient.numTel}" class="inputText"/><br/>
+                            <h:commandButton value="#{trd.valider}" action="#{clientControleur.verifierFormulaire(clientControleur.nouveauClient)}" class="btn"/>
                         </h:form>
                     </div>
                 </div>

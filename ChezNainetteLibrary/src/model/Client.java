@@ -13,7 +13,8 @@ import java.util.ArrayList;
  */
 public class Client {
     private int idClient;
-    private String nomPrenom;
+    private String nom;
+    private String prenom;
     private String motDePasse;
     private String adresseMail;
     private String numTel;
@@ -37,20 +38,6 @@ public class Client {
      */
     public void setIdClient(int idClient) {
         this.idClient = idClient;
-    }
-
-    /**
-     * @return the nomPrenom
-     */
-    public String getNomPrenom() {
-        return nomPrenom;
-    }
-
-    /**
-     * @param nomPrenom the nomPrenom to set
-     */
-    public void setNomPrenom(String nomPrenom) {
-        this.nomPrenom = nomPrenom;
     }
 
     /**
@@ -135,6 +122,34 @@ public class Client {
      */
     public void setLangue(String langue) {
         this.langue = langue;
+    }
+
+    /**
+     * @return the nom
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * @param nom the nom to set
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    /**
+     * @return the prenom
+     */
+    public String getPrenom() {
+        return prenom;
+    }
+
+    /**
+     * @param prenom the prenom to set
+     */
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
     
 }

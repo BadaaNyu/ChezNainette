@@ -108,14 +108,11 @@ ul{
     vertical-align: baseline;
 }
 
-li{
-    padding : 2px 1px;
-}
 
 .topBarLeft{
-    background-color: #B0F9B5;
     float: left;
     padding-left: 17px;
+    width: 800px;
     vertical-align: baseline;
 }
 
@@ -290,6 +287,82 @@ li{
     padding: 10px;
 }
 
-*{
-    padding:2px;
+.article{
+    position: relative;
+    float: left;
+    width: 168px;
+    margin: 10px 0px 10px 10px;
+}
+
+.divImageArticle{
+    
+}
+
+.divTextArticle{
+    
+}
+
+.btn {
+  border-radius: 32px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #34d960;
+  padding: 2px 9px 2px 9px;
+  text-decoration: none;
+}
+
+.btn:hover , .petitbtn:hover {
+  background: #a0ff7a;
+  text-decoration: none;
+}
+
+.petitbtn {
+  border-radius: 32px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 8px;
+  background: #34d960;
+  padding: 2px 9px 2px 9px;
+  text-decoration: none;
+}
+
+.rightDiv .inputText {
+    padding: 7px 5px;
+    width: 298px;
+    float: right;
+    height: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.rightDiv label {
+    display: block;
+    font: 16px Georgia,"Times New Roman",Times,serif;
+    padding: 6px 0px;
+    text-align: right;
+    width: 170px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.leftDiv .inputText {
+    padding: 7px 5px;
+    width: 255px;
+    float: right;
+    height: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.leftDiv label {
+    display: block;
+    font: 16px Georgia,"Times New Roman",Times,serif;
+    padding: 5px 0px;
+    text-align: right;
+    width: 105px;
+    float: left;
+    margin-bottom: 5px;
 }

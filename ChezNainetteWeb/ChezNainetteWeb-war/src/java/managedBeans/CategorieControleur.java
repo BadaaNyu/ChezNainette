@@ -14,9 +14,10 @@ import java.util.Locale;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
-import javax.faces.model.ListDataModel;
+import model.Article;
 import model.Categorie;
 
 /**
@@ -24,7 +25,7 @@ import model.Categorie;
  * @author François
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class CategorieControleur {
 
     /**
@@ -33,6 +34,7 @@ public class CategorieControleur {
     
     @EJB
     private ChezNainetteSessionRemote ejbFacade;
+    private Categorie categorieActuelle;
     private List<Categorie> categories = null;
     
     public CategorieControleur(){
@@ -53,7 +55,7 @@ public class CategorieControleur {
 */
         ArrayList<Categorie> arrayNewCat = new ArrayList<Categorie> ();
         categories = Collections.synchronizedList(arrayNewCat);
-        for (int i =0 ; i < 5;i++){
+        for (int i =0 ; i < 12;i++){
             Categorie categorie = new Categorie ();
             categorie.setArticles(null);
             categorie.setCouleur("red");
@@ -64,11 +66,29 @@ public class CategorieControleur {
         }
         return categories;
     }
-
     /**
      * @param categories the categories to set
      */
     public void setCategories(List<Categorie> categories) {
         this.categories = categories;
+    }
+    
+    public String listerArticleByCat(int idCategorie){
+        categorieActuelle= categories.get(idCategorie);
+        return "categorie";
+    }
+
+    /**
+     * @return the categorieActuelle
+     */
+    public Categorie getCategorieActuelle() {
+        return categorieActuelle;
+    }
+
+    /**
+     * @param categorieActuelle the categorieActuelle to set
+     */
+    public void setCategorieActuelle(Categorie categorieActuelle) {
+        this.categorieActuelle = categorieActuelle;
     }
 }

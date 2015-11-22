@@ -18,10 +18,8 @@ public class Article {
     private double profondeur;
     private String photo;
     private Categorie categorie;
-    private String denomAnglais;
-    private String denomFrancais;
-    private String descriptionAnglais;
-    private String descriptionFrancais;
+    private String denomination;
+    private String description;
     
     public Article (){
         
@@ -140,58 +138,31 @@ public class Article {
     }
 
     /**
-     * @return the denomAnglais
+     * @return the denomination
      */
-    public String getDenomAnglais() {
-        return denomAnglais;
+    public String getDenomination() {
+        return denomination;
     }
 
     /**
-     * @param denomAnglais the denomAnglais to set
+     * @param denomination the denomination to set
      */
-    public void setDenomAnglais(String denomAnglais) {
-        this.denomAnglais = denomAnglais;
+    public void setDenomination(String denomination) {
+        this.denomination = denomination;
     }
 
     /**
-     * @return the denomFrancais
+     * @return the description
      */
-    public String getDenomFrancais() {
-        return denomFrancais;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * @param denomFrancais the denomFrancais to set
+     * @param description the description to set
      */
-    public void setDenomFrancais(String denomFrancais) {
-        this.denomFrancais = denomFrancais;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    /**
-     * @return the descriptionAnglais
-     */
-    public String getDescriptionAnglais() {
-        return descriptionAnglais;
-    }
-
-    /**
-     * @param descriptionAnglais the descriptionAnglais to set
-     */
-    public void setDescriptionAnglais(String descriptionAnglais) {
-        this.descriptionAnglais = descriptionAnglais;
-    }
-
-    /**
-     * @return the descriptionFrancais
-     */
-    public String getDescriptionFrancais() {
-        return descriptionFrancais;
-    }
-
-    /**
-     * @param descriptionFrancais the descriptionFrancais to set
-     */
-    public void setDescriptionFrancais(String descriptionFrancais) {
-        this.descriptionFrancais = descriptionFrancais;
-    }
 }
